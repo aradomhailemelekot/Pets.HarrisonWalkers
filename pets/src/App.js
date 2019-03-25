@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
+import { Router, Route, Indexroute, hashHistory } from 'react-router'
 import './App.css';
 
 class App extends Component {
@@ -37,6 +39,7 @@ class App extends Component {
         <h4 className='Center'>Pet photos coming soon!</h4>
         {postList}
       </div>
+
     );
   }
 }
