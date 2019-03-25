@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
-import { Router, Route, Indexroute, hashHistory } from 'react-router'
+import { Router, Route, Indexroute, hashHistory } from 'react-router';
+import Header from './Header.js';
+import Random from './Random.js';
+import DropDown from './DropDown.js';
+import Footer from './Footer.js';
+import HarrisonWalkers from './HarrisonWalkers.js';
 import './App.css';
 
 class App extends Component {
@@ -32,13 +37,21 @@ class App extends Component {
         )
       })
     ) : (
-        <div className="location"> No posts yet</div>
+        <div className="location"> No posts to this DIV element yet</div>
       )
     return (
       <div className="App">
         <h4 className='Center'>Pet photos coming soon!</h4>
         {postList}
+        <Header />
+        <Random />
+        <DropDown />
+        <HarrisonWalkers />
+        <Footer />
+
       </div>
+
+
 
     );
   }
