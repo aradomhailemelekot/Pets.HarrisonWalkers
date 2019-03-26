@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
-import { Router, Route, Indexroute, hashHistory } from 'react-router';
+import { Router, Route, Indexroute } from 'react-router';
 import Header from './Header.js';
 import Random from './Random.js';
 import DropDown from './DropDown.js';
@@ -34,18 +34,27 @@ class App extends Component {
             <div className='card-content'>
               <span className='card-title'>{post.title}</span>
               <p>{posts.body}</p>
+              <nav className='main-nav'>
+                <ul>
+                  <li>Logo</li>
+                  <li>Photos</li>
+                  <li>Dog Walks</li>
+                  <li>Pup Training</li>
+                </ul>
+              </nav>
             </div>
 
           </div>
         )
       })
     ) : (
-        <div className="location"> No posts to this DIV element yet</div>
+        <div className="location"> Do I need this div?o posts to this div?</div>
       )
     return (
       <div className="App">
-        <h4 className='Center'>Pet photos coming soon!</h4>
+
         {postList}
+
         <Header />
         <Random />
         <DropDown />
