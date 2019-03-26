@@ -13,6 +13,7 @@ class App extends Component {
   state = {
     posts: []
   }
+
   componentDidMount() {
     axios.get('https://dog.ceo/api/breeds/list/all')
       .then(res => {
@@ -22,6 +23,8 @@ class App extends Component {
         })
       })
   }
+
+
   render() {
     const { posts } = this.state;
     const postList = posts.length ? (

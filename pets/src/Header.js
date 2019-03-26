@@ -4,6 +4,14 @@ export default class Header extends Component {
     render() {
         return (
             <div>
+
+                <nav>
+
+                    <a href='www.harrisonwalkers.com'>Dog Walks</a>
+                    <br>
+                    </br>
+                    <a href='#'>More Dog Photos</a>
+                </nav>
                 <header>
                     Pet stuff rendering in Header!
                 </header>

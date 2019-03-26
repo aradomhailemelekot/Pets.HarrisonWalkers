@@ -5,7 +5,7 @@ export default class HarrisonWalkers extends Component {
         return (
             <div>
                 Harrison Walkers, Your Friendly Neighborhood Dog Walkers
-        <a href="https://harrisonwalkers.com/"></a>
+        {/* <a href="https://harrisonwalkers.com/"></a> */}
             </div>
         )
     }
