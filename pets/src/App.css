@@ -1,10 +1,4 @@
-
-.Logo {
-  display: flex;
-  height: 30px;
-
-}
-  .main-nav {
+.main-nav {
     display: flex;
     background: orangered;
     color: white;
@@ -36,10 +30,10 @@
   }
 
   .Dropdown{
-    background-color:
+    background-color: darkblue;
   }
   .Random {
-  background-color:
+  background-color: red;
 }
   /* .button {
     background: white;
@@ -51,7 +45,7 @@
   } */
 
   .Harrison{
-    background-color: 
+    background-color: aqua;
   }
 
   .nav {
@@ -83,7 +77,7 @@
   } */
 
   .Footer {
-    background-color: 
+    background-color: fuchsia;
   }
 
   /* @media screen and (max-width: 575px) {

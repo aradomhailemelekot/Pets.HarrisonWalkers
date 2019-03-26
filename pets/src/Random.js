@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 
 export default class Random extends Component {
+    // constructor(props)
+    // super(props)
+    // this.state = {
+    //     title: '',
+    //     giphy: ''
+    // }
     render() {
         return (
             <div className='Random'>
-                Data Message
-                <header>
-
-                    {/* <h4 className='Center'>Pet photos coming soon!</h4> */}
-                </header>
+                <main>Pet photos coming soon!</main>
             </div>
         )
     }

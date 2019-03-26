@@ -9,28 +9,32 @@ import HarrisonWalkers from './HarrisonWalkers.js';
 import './App.css';
 
 class App extends Component {
-  state = {
-    posts: []
+  constructor(props) {
+    super(props)
+    this.state = {
+      posts: [],
+      breed: ''
+    }
+    this.getPropertyName = this.getPropertyName.bind(this)
   }
 
-  getImage() {
+  getImages() {
     axios.get('https://dog.ceo/api/breeds/list/all')
-      .then(res => res.json())
-      .then(data => {
+      .then(res => res)
+      .then(posts => {
         this.setState({
-          photo: data.message
+          posts: posts.data.message,
         })
       })
   }
 
   componentDidMount() {
-    axios.get('https://dog.ceo/api/breeds/list/all')
-      .then(res => {
-        console.log("i am res", res)
-        this.setState({
-          // posts: res.data()
-        })
-      })
+    this.getImages()
+  }
+
+  getPropertyName() {
+    console.log('running')
+    console.log(Object.getOwnPropertyNames(this.state.posts.data.message[0]));
   }
 
   handleSubmit(e) {
@@ -45,37 +49,38 @@ class App extends Component {
   }
 
   render() {
-    const { posts } = this.state;
-    const postList = posts.length ? (
-      posts.map(post => {
-        return (
-          <div className='post card' key={post.id}>
-            <div className='card-content'>
-              <span className='card-title'>{post.title}</span>
-              <p>{posts.body}</p>
-              <nav className='main-nav'>
-                <ul>
-                  <li>Logo</li>
-                  <li>Photos</li>
-                  <li>Dog Walks</li>
-                  <li>Pup Training</li>
-                </ul>
+    // const { posts } = this.state;
+    // const postList = posts.length ? (
+    //   posts.map(post => {
+    //     return (
+    //       <div className='post card' key={post.id}>
+    //         <div className='card-content'>
+    //           <span className='card-title'>{post.title}</span>
+    //           <p>{posts.body}</p>
+    //           <nav className='main-nav'>
+    //             <ul>
+    //               <li>Logo</li>
+    //               <li>Photos</li>
+    //               <li>Dog Walks</li>
+    //               <li>Pup Training</li>
+    //             </ul>
 
-              </nav>
+    //           </nav>
 
-            </div>
+    //         </div>
 
-          </div>
-        )
-      })
-    ) : (
-        <div className="location">
-          {/* Do I need this div?o posts to this div? */}
-        </div>
-      )
+    //       </div>
+    //     )
+    //   })
+    // ) : (
+    //     <div className="location">
+    //       {/* Do I need this div?o posts to this div? */}
+    //     </div>
+    //   )
     return (
       <div className="App">
-        {postList}
+        {/* {postList} */}
+        <button onClick={this.getPropertyName}>Click me</button>
         <Logo />
         <Header />
         <Random />
