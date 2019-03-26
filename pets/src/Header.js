@@ -7,10 +7,10 @@ export default class Header extends Component {
                 <nav className="nav">
                     <ul>
 
-                        <li><a href='www.harrisonwalkers.com'>HEADER/NAV Dog Walks</a></li>
-                        <li><a href='#'>HEADER/NAVPhotos</a></li>
-                        <li><a href='#'>HEADER/NAVBlog</a></li>
-                        <li><a href='www.harrisonwalkers.com'>HEADER/NAVMore Info</a></li>
+                        <li><a href='www.harrisonwalkers.com'>Dog Walks</a></li>
+                        <li><a href='#'>Photos</a></li>
+                        <li><a href='#'>Blog</a></li>
+                        <li><a href='www.harrisonwalkers.com'>More Info</a></li>
                     </ul>
                 </nav>
 

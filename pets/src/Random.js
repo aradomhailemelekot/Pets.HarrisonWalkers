@@ -7,8 +7,8 @@ export default class Random extends Component {
             <div className='Random'>
                 Data Message
                 <header>
-                    Beautiful RANDOM dog photos coming here soon!
-                    <h4 className='Center'>Pet photos coming soon!</h4>
+
+                    {/* <h4 className='Center'>Pet photos coming soon!</h4> */}
                 </header>
             </div>
         )

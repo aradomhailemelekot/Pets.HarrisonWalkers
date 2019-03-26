@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Logo from './Logo.js';
 import Header from './Header.js';
 import Random from './Random.js';
 import DropDown from './DropDown.js';
@@ -68,11 +69,14 @@ class App extends Component {
         )
       })
     ) : (
-        <div className="location"> Do I need this div?o posts to this div?</div>
+        <div className="location">
+          {/* Do I need this div?o posts to this div? */}
+        </div>
       )
     return (
       <div className="App">
         {postList}
+        <Logo />
         <Header />
         <Random />
         <DropDown />
