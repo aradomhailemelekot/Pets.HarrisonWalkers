@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ReactDOM from 'react-dom';
-import { Router, Route, Indexroute } from 'react-router';
 import Header from './Header.js';
 import Random from './Random.js';
 import DropDown from './DropDown.js';
@@ -14,6 +12,16 @@ class App extends Component {
     posts: []
   }
 
+  getImage() {
+    axios.get('https://dog.ceo/api/breeds/list/all')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          photo: data.message
+        })
+      })
+  }
+
   componentDidMount() {
     axios.get('https://dog.ceo/api/breeds/list/all')
       .then(res => {
@@ -24,6 +32,16 @@ class App extends Component {
       })
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    //check this if something is not working
+    axios.get('https://dog.ceo/api/breeds/list/all')
+      .then(function (res) {
+        return res.json();
+      }
+      )
+
+  }
 
   render() {
     const { posts } = this.state;
@@ -41,7 +59,9 @@ class App extends Component {
                   <li>Dog Walks</li>
                   <li>Pup Training</li>
                 </ul>
+
               </nav>
+
             </div>
 
           </div>
@@ -52,17 +72,13 @@ class App extends Component {
       )
     return (
       <div className="App">
-
         {postList}
-
         <Header />
         <Random />
         <DropDown />
         <HarrisonWalkers />
         <Footer />
-
       </div>
-
 
 
     );

@@ -48,11 +48,34 @@
   .Harrison{
     background-color: aqua;
   }
-  .Header {
+
+  .nav {
+    grid-row: 2;
+    text-align: center;
+    background: red;
+    grid-area: v;
+    grid-auto-flow: column;
+  }
+
+  nav ul{
+    margin: 0;
+    padding: 25;
+    list-style: none;
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+
+  nav li{
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+
+  /* .Header {
     background-color: hotpink;
     flex-direction: row; 
     margin-bottom: 1em;
-  }
+  } */
 
   .Footer {
     background-color: fuchsia;
